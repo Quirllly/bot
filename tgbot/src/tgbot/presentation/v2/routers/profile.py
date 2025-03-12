@@ -75,7 +75,7 @@ async def daily_bonus(
         user.balance += 1
         user.last_daily_bonus = datetime.now()
         await session.commit()
-        await callback.answer("✅Ты получил ежедневный бонус в размере 1⭐️", show_alert=True)
+        await callback.answer("✅Ты получил(а) ежедневный бонус в размере 1⭐️", show_alert=True)
     else:
         await callback.answer(
             f"❌ Сначала поставь свою личную ссылку в описание профиля или измени настройки конфиденциальности",
