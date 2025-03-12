@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "tgbot"
+version = "0.1.0"
+description = ""
+authors = ["ShapovalovIlia <ilia-shapvalov04@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.17.0"
+sqlalchemy = "^2.0.37"
+alembic = "^1.14.1"
+dishka = "^1.4.2"
+psycopg2 = "^2.9.10"
+asyncpg = "^0.30.0"
+greenlet = "^3.1.1"
+cryptography = "^44.0.2"
+telethon = "^1.39.0"
+hydrogram = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.3"
+pre-commit = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
