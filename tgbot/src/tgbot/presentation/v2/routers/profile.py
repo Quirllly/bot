@@ -110,7 +110,7 @@ async def enter_promo_code(
     await callback.message.answer_animation(
         animation="CgACAgIAAxkBAAIKV2fGRe1ERmBAmZMD_FMSj9rpNLTkAAJ6agACprThSXQUewG4dhmzNgQ",
         caption="✨ <i>Для получения звезд на твой баланс введи промокод:</i>\n"
-        "<i>Найти промокоды можно в канале <a href='https://t.me/patrickstarsfarm'>канале</a> и <a href='https://t.me/patrickstarschat'>чате</a></i>",
+        "<i>Найти промокоды можно в <a href='https://t.me/patrickstarsfarm'>канале</a> и <a href='https://t.me/patrickstarschat'>чате</a></i>",
         reply_markup=get_faq_keyboard(),
         parse_mode="HTML"
     )
@@ -147,7 +147,7 @@ async def process_promo_code(
         return
 
     if await promo_gateway.is_promo_used(user.id, promocode.id):
-        await message.answer("🚫 Вы уже активировали этот промокод", show_alert=True)
+        await message.answer("🚫 Ты уже активировал(а) этот промокод", show_alert=True)
         await state.clear()
         return
 
